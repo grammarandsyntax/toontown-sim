@@ -10,6 +10,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Cog flunky = new Cog("Flunky",1,2);
+        Toon p = new Toon(flunky.getLevel());
+
         System.out.println("Test");
     }
+
 }
