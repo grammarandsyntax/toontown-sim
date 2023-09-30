@@ -1,16 +1,16 @@
 public class Cog {
+    //instance variables
     private String name;
     private int level;
-    private int defense;
+    private int hp;
 
-    public Cog (String n, int l, int d){
+    public Cog (String n, int l, int h){
         name = n;
         level = l;
-        defense = d;
+        hp = h;
     }
-    public Cog (String n, int l){
 
-    }
+    //methods
     public int getLevel(){
         return level;
     }

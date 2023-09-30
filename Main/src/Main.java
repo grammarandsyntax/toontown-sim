@@ -13,7 +13,7 @@ public class Main {
         Cog flunky = new Cog("Flunky",1,2);
         Toon p = new Toon(flunky.getLevel());
 
-        System.out.println("Test");
+        System.out.println(p.getLaff());
     }
 
 }
