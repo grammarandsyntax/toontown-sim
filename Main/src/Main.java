@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Main { //aahhhh
+public class Main { //aahhhhh
     static void Wait(int milliseconds)
     {
         try {
