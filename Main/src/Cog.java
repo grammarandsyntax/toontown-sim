@@ -4,14 +4,17 @@ public class Cog {
     private int level;
     private int hp;
 
-    public Cog (String n, int l, int h){
+    public Cog (String n, int l){
         name = n;
         level = l;
-        hp = h;
+        hp = (level+1)*(level+2);
     }
 
     //methods
     public int getLevel(){
         return level;
+    }
+    public int getHp(){
+        return hp;
     }
 }
