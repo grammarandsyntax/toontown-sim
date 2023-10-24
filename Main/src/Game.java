@@ -19,6 +19,6 @@ public class Game {
         Random rand = new Random();
         Cog c = new Cog("Flunky", rand.nextInt(1,13)); //generate level between 1 and 12
         Toon p = new Toon((int)((c.getLevel() + 0.3) * (c.getLevel() + 0.2)));
-        // calculations all good
+        // calculations all goo
         }
     }
