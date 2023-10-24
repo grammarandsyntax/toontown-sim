@@ -1,7 +1,7 @@
 public class Toon {
-    //instance variables
     private int laff;
 
+    //constructor
     public Toon(int la){
         laff = la;
     }
