@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Menu {
     public Menu(){
         welcomeScreen();
@@ -29,6 +30,8 @@ public class Menu {
                 " ; '._,' '   | |   | |  | |  | |           / '____  (   ) '  `-' /                         \n" +
                 "  '.___.'   (___) (___)(___)(___)         (_______)  `-'   `.__,' ");
         System.out.println("\n\"Are YOU Toon Enough?\"\n(Now with more doodles!)\n"+dashes+"\n");
-        System.out.println("test");
+        System.out.println("Write later, enter int");
+        Scanner s = new Scanner(System.in);
+        int menuInput = s.nextInt();
     }
 }
