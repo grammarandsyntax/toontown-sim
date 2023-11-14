@@ -10,6 +10,7 @@ public class Game {
   //runner
   public Game(){
     setup();
+    intro();
   }
   
   public void setup() {
@@ -20,6 +21,8 @@ public class Game {
     System.out.println(c.getHp());
     //toon testing
     Toon p = new Toon((int)((c.getLevel() + 0.3) * (c.getLevel() + 0.2))); //calculations work, level calculation subject to change
-    System.out.println(p.getLaff());
+  }
+  public void intro(){
+    System.out.println("add story :3");
   }
 }
