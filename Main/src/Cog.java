@@ -21,10 +21,10 @@ public class Cog {
     }
 
     //get + set
-    public int getminindex(){
+    public int getMinIndex(){
       return minIndex;
     }
-    public int getmaxindex(){
+    public int getMaxIndex(){
       return maxIndex;
     }
     public String getName(){
