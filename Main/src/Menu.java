@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class Menu {
     String question = "Would you like to:\n  (1) Learn more about how to play\n  (2) Begin the game\nEnter choice: ";
@@ -7,6 +8,13 @@ public class Menu {
         } catch(InterruptedException e){
             Thread.currentThread().interrupt();
         }
+    }
+    static void clearScreen(){
+        char c = '\n';
+        int length = 40;
+        char[] chars = new char[length];
+        Arrays.fill(chars, c);
+        System.out.print(String.valueOf(chars));
     }
     public Menu(){
         welcomeScreen();
@@ -47,17 +55,20 @@ public class Menu {
         int menuInput = s.nextInt();
 
         while (true){ //menu active
-            if (menuInput<1 || menuInput>2){ //make neater later
+            //make neater later
+            if (menuInput<1 || menuInput>2){    //invalid choice
                 System.out.print("Please enter a valid choice: ");
                 menuInput = s.nextInt();
-            }else if (menuInput==1){
+            }else if (menuInput==1){    // choose manual
                 choiceOne();
                 System.out.print(question);
                 menuInput = s.nextInt();
-            }else{
+            }else{                          //start game
+                clearScreen();
                 Game g = new Game();
                 break;
             }
         }
+
     }
 }
