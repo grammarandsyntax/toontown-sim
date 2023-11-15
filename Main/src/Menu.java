@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 public class Menu {
-    String question = "Would you like to:\n  (1) Learn more about how to play\n  (2) Begin the game\nEnter choice: ";
+    private String question = "Would you like to:\n  (1) Learn more about how to play\n  (2) Begin the game\nEnter choice: ";
     static void wait(int milliseconds) {
         try {
             Thread.sleep(milliseconds);
@@ -23,6 +23,7 @@ public class Menu {
         System.out.println("maybe write manual class\s");
     }
     public void welcomeScreen(){
+        Toon p = new Toon();
         String dashes = "------------------------------------------------------------------------------------";
         System.out.println("Welcome to...\n"+dashes+"\n ___                                    ___\n" +
                 "(   )                                  (   )                                        \n" +
@@ -65,7 +66,7 @@ public class Menu {
                 menuInput = s.nextInt();
             }else{                          //start game
                 clearScreen();
-                Game g = new Game();
+                Game g = new Game(p);
                 break;
             }
         }
