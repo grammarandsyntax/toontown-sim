@@ -1,6 +1,7 @@
 public class Toon {
     private int laff;
     private int timesPlayedGame;
+    private boolean alreadyOpened=false;
 
     //constructor
     public Toon(){
@@ -16,8 +17,17 @@ public class Toon {
     public void setLaff(int la){
         laff = la;
     }
+    public int getTimesPlayedGame(){
+        return timesPlayedGame;
+    }
     public void addOneGameplay(){
         timesPlayedGame++;
+    }
+    public void setAsOpened(){
+        alreadyOpened=true;
+    }
+    public boolean getAlreadyOpened(){
+        return alreadyOpened;
     }
 
 }

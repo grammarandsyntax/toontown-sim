@@ -26,4 +26,5 @@ public class Game {
   public void intro(){
     System.out.println("add story :3");
   }
+  //add menu call with menu constructor test new parameter for EXIT
 }

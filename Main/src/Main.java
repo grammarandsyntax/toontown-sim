@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Menu m = new Menu();
+        Toon p = new Toon();
+        Menu m = new Menu(p);
     }
 }

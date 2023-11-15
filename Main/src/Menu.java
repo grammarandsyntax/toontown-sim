@@ -16,16 +16,18 @@ public class Menu {
         Arrays.fill(chars, c);
         System.out.print(String.valueOf(chars));
     }
-    public Menu(){
-        welcomeScreen();
+    public Menu(Toon p){
+        if (!p.getAlreadyOpened()) {
+            welcomeScreen(p);
+        }
+        questionScreen(p);
     }
     static void choiceOne(){
         System.out.println("maybe write manual class\s");
     }
-    public void welcomeScreen(){
-        Toon p = new Toon();
+    public void welcomeScreen(Toon p) {
         String dashes = "------------------------------------------------------------------------------------";
-        System.out.println("Welcome to...\n"+dashes+"\n ___                                    ___\n" +
+        System.out.println("Welcome to...\n" + dashes + "\n ___                                    ___\n" +
                 "(   )                                  (   )                                        \n" +
                 " | |_       .--.     .--.    ___ .-.    | |_       .--.    ___  ___  ___  ___ .-.    \n" +
                 "(   __)    /    \\   /    \\  (   )   \\  (   __)    /    \\  (   )(   )(   )(   )   \n" +
@@ -49,9 +51,12 @@ public class Menu {
                 " | |  `\\ |   | |   | |  | |  | |            / /      .-.  | '  | |                         \n" +
                 " ; '._,' '   | |   | |  | |  | |           / '____  (   ) '  `-' /                         \n" +
                 "  '.___.'   (___) (___)(___)(___)         (_______)  `-'   `.__,' ");
-        System.out.println("\n\"Are YOU Toon Enough?\"\n(Now with more doodles!)\n"+dashes+"\n");
+        System.out.println("\n\"Are YOU Toon Enough?\"\n(Now with more doodles!)\n" + dashes + "\n");
         wait(2000);
-        System.out.println("Write later \n"+question);
+        System.out.println("Write later \n" + question);
+        p.setAsOpened();
+    }
+    public void questionScreen(Toon p){
         Scanner s = new Scanner(System.in);
         int menuInput = s.nextInt();
 
