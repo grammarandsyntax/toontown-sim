@@ -1,16 +1,17 @@
 import java.util.Scanner;
 public class Game {
-  static void Wait(int milliseconds){
+  static void wait(int milliseconds){
     try {
       Thread.sleep(milliseconds);
     } catch(InterruptedException e){
       Thread.currentThread().interrupt();
     }
   }
-  //runner
+  //construct or
   public Game(Toon p){
     setup(p);
     intro();
+    Menu m = new Menu(p); //ending
   }
   
   public void setup(Toon t) {
@@ -25,6 +26,7 @@ public class Game {
   }
   public void intro(){
     System.out.println("add story :3");
+    wait(3000);
+    System.out.println("test");
   }
-  //add menu call with menu constructor test new parameter for EXIT
 }

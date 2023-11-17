@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 public class Menu {
-    private String question = "Would you like to:\n  (1) Learn more about how to play\n  (2) Begin the game\nEnter choice: ";
+    final private String question = "Would you like to:\n  (1) Learn more about how to play\n  (2) Begin the game\nEnter choice: ";
     static void wait(int milliseconds) {
         try {
             Thread.sleep(milliseconds);
@@ -19,7 +19,9 @@ public class Menu {
     public Menu(Toon p){
         if (!p.getAlreadyOpened()) {
             welcomeScreen(p);
+            p.setAsOpened();
         }
+        System.out.println(question);
         questionScreen(p);
     }
     static void choiceOne(){
@@ -53,7 +55,6 @@ public class Menu {
                 "  '.___.'   (___) (___)(___)(___)         (_______)  `-'   `.__,' ");
         System.out.println("\n\"Are YOU Toon Enough?\"\n(Now with more doodles!)\n" + dashes + "\n");
         wait(2000);
-        System.out.println("Write later \n" + question);
         p.setAsOpened();
     }
     public void questionScreen(Toon p){
