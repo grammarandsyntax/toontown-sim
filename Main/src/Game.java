@@ -11,6 +11,8 @@ public class Game {
   public Game(Toon p){
     setup(p);
     intro();
+
+    p.addOneGameplay();
     Menu m = new Menu(p); //ending
   }
   
@@ -27,6 +29,8 @@ public class Game {
   public void intro(){
     System.out.println("add story :3");
     wait(3000);
-    System.out.println("test");
+  }
+  public void gagShop(Toon p){
+
   }
 }
