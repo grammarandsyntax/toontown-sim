@@ -2,6 +2,7 @@ public class Toon {
     private int laff;
     private int timesPlayedGame;
     private boolean alreadyOpened=false;
+    private int jellybeans;
 
     //constructor
     public Toon(){
@@ -29,5 +30,10 @@ public class Toon {
     public boolean getAlreadyOpened(){
         return alreadyOpened;
     }
-
+    public void setJellybeans(int s){
+        jellybeans = s;
+    }
+    public int getJellybeans(){
+        return jellybeans;
+    }
 }
