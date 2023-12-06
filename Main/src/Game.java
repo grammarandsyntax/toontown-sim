@@ -13,6 +13,7 @@ public class Game {
     intro();
 
     p.addOneGameplay();
+    pressEnterKeyToContinue();
     Menu m = new Menu(p); //ending
   }
   
@@ -29,6 +30,11 @@ public class Game {
   public void intro(){
     System.out.println("add story :3");
     wait(3000);
+  }
+  public void pressEnterKeyToContinue() { // https://stackoverflow.com/a/60551956
+    System.out.println("Press Enter key to return to menu...");
+    Scanner s = new Scanner(System.in);
+    s.nextLine();
   }
   public void gagShop(Toon p){
 
